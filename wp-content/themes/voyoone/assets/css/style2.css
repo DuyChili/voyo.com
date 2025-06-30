@@ -1,0 +1,131 @@
+.navbar img {
+    width: 180px;
+}
+
+
+.nav-item.dropdown:hover .drop {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown-item:hover {
+    color: green !important; /* Màu xanh lá */
+    background-color: transparent !important; /* Nền không thay đổi */
+}
+
+.dropdown-menu {
+    background-color: rgba(36, 35, 35, 0.8) !important; /* Nền trắng mờ nhẹ */
+}
+
+.nav-link {
+    position: relative;
+    color: #000;
+    transition: color 0.3s ease; /* Hiệu ứng màu chữ */
+}
+
+
+.nav-link:hover {
+    color: #28a745; /* Màu xanh lá */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #28a745; /* Đường viền xanh lá */
+    transition: width 0.3s ease; /* Hiệu ứng viền */
+}
+
+
+#section1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(40, 167, 69, 0.9);
+    z-index: 1020;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#section2 {
+    position: fixed;
+    top: 70px; /* Ban đầu nằm dưới Section 1 */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Nền trắng mờ */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Hiệu ứng mượt */
+    z-index: 1000;
+}
+
+
+
+/* Submenu dropdown */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-menu > .dropdown-item {
+    display: none;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: 0;
+    border-radius: 0.25rem;
+}
+
+/* Hiển thị submenu khi hover */
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+/* Định dạng các mục con */
+.dropdown-item.dropdown-toggle::after {
+    font-weight: 900;
+    float: right;
+}
+
+.a{
+    margin-top: 170px;
+    background-image: linear-gradient(rgba(26, 25, 24, 0.5), rgba(27, 26, 26, 0.5)), url("../img/s-202.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#nav-button> .nav-link.active {
+    background-color: green !important;
+    color: white !important;
+}
+#nav-button>.nav-link:hover {
+    background-color: green !important;
+    color: white !important;
+}
+.list-unstyled > li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.b> .container{
+    background-image: url("../img/shadow.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: scroll;
+    background-position-x: 50%;
+    background-position-y: 0%;
+}
+
+.nav-item>ul{
+   
+    border-radius: 0;
+    border-block: 3px solid rgb(0, 119, 0);
+}
+
+.dropdown-submenu>ul{
+    border-radius: 0;
+    border-block: 3px solid rgb(0, 119, 0);
+}

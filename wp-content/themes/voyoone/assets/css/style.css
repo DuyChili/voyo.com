@@ -1,0 +1,406 @@
+.dropdown-menu{
+    background-color: rgba(36, 35, 35, 0.8) !important; /* Nền trắng mờ nhẹ */
+}
+.navbar img{
+    width: 180px;
+}
+  /* Hiển thị menu khi hover */
+  .nav-item.dropdown:hover .drop {
+    display: block;
+    margin-top: 0;
+}
+.dropdown-item:hover {
+    color: green !important; 
+    background-color: transparent !important; 
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9) !important; /* Nền trắng mờ nhẹ */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Hiệu ứng chuyển đổi */
+    z-index: 1000; /* Đảm bảo navbar luôn hiển thị phía trên */
+}
+
+.nav-link {
+    position: relative;
+    color: #000; /* Màu chữ ban đầu */
+    transition: color 0.3s ease; /* Hiệu ứng đổi màu chữ */
+}
+
+.nav-link:hover {
+    color: #28a745; /* Màu xanh lá khi hover */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #28a745; /* Màu xanh lá cho đường viền */
+    transition: width 0.3s ease; /* Hiệu ứng chạy từ trái sang */
+}
+
+.nav-item>ul{
+   
+    border-radius: 0;
+    border-block: 3px solid rgb(0, 119, 0);
+}
+
+.dropdown-submenu>ul{
+    border-radius: 0;
+    border-block: 3px solid rgb(0, 119, 0);
+}
+
+.carousel{
+    margin-top: 100px;
+}
+.carousel img{
+    height: 600px;
+}
+.icon{
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+}
+.icon:hover {
+    transform: scale(0.98); /* Giảm kích thước của icon container */
+}
+.icon:hover i {
+    color: green; /* Thay đổi màu biểu tượng thành xanh lá khi hover */
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Ban đầu trong suốt */
+    z-index: 2; /* Đặt trên ảnh */
+}
+
+.image-container:hover::before {
+    background: rgba(0, 0, 0, 0.6); /* Khi hover, nền chuyển sang đen trong suốt */
+}
+
+.overlay {
+    margin: 20px;
+    border: 1px solid white;
+    position: absolute;
+    width: 90%;
+    height: 85%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3; /* Overlay nằm trên pseudo-element */
+    opacity: 0; /* Bắt đầu ẩn */
+    transform: scale(0.8); /* Bắt đầu nhỏ hơn */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Hiện overlay */
+    transform: scale(1); /* Phóng to overlay */
+}
+
+.overlay i {
+    margin-inline: 10px;
+    font-size: 16px;
+    padding-block: 14px;
+    padding-inline: 20px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.overlay i:hover {
+    background-color: green;
+}
+
+
+.c{
+   background-color: rgb(32, 141, 28);
+}
+.c .box-title-2{
+    color: rgb(53, 52, 51);
+}
+.c .alhpa{
+    color: rgba(254, 254, 254, 0.9);
+}
+#section-3{
+    width: 100%;
+    background-image: url("../img/s-106.jpg");
+    background-position: initial; /* Căn giữa ảnh nền */
+    background-repeat: no-repeat;
+    display: flex; /* Sử dụng flex để căn giữa */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: stretch; /* Căn giữa các phần tử con và đảm bảo chiều cao bằng nhau */
+}
+.c a {
+
+    border: 1px solid white; /* Viền trắng */
+    color: white; /* Màu chữ mặc định */
+    text-decoration: none; /* Loại bỏ gạch chân */
+    padding: 10px 20px; /* Thêm khoảng cách trong thẻ */
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi mượt */
+}
+
+.c a:hover {
+    background-color: white; /* Đổi nền thành trắng */
+    color: green; /* Đổi màu chữ thành xanh lá */
+}
+
+.alert {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: space-between; /* Căn giữa theo chiều ngang và khoảng cách giữa các phần tử */
+    padding: 15px;
+}
+
+.alert .close {
+    margin-left: auto; /* Đẩy nút đóng ra phía bên phải */
+    border: none;
+    background: none;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.alert i {
+    margin-right: 10px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
+
+.alert p {
+    margin: 0; /* Xóa khoảng cách mặc định của thẻ p */
+    color: white;
+}
+.large-padding >.container{
+    background-image: url("../img/i-101.png");
+    background-position: calc(100% - 200px) center ; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: inherit;  
+}
+
+
+
+.border-right {
+    border-right: 2px dashed #ddd; /* Đường viền gạch đứt */
+}
+#d > .col-sm-4:last-child {
+    border-right: none; /* Xóa viền của cột cuối cùng */
+}
+
+.circle-icon {
+    font-size: 40px;
+    color: white;
+    background-color: #5c5d5e; /* Màu nền (bg-dark) */
+    border-radius: 50%; /* Bo góc thành hình tròn */
+    display: inline-flex; /* Hiển thị dưới dạng khối để căn giữa nội dung */
+    align-items: center; /* Căn giữa dọc nội dung */
+    justify-content: center; /* Căn giữa ngang nội dung */
+    width: 80px; /* Kích thước cố định ngang */
+    height: 80px; /* Kích thước cố định dọc */
+    transition: all 0.3s ease; /* Thêm hiệu ứng mượt khi hover */
+}
+
+#d > .col-sm-4:hover i, 
+#d > .col-sm-4 i:hover{
+    background-color: green; /* Màu xanh khi hover */
+    box-shadow: inset 0 0 15px rgba(38, 38, 39, 0.6); /* Độ bóng bên trong */
+}
+
+.e > .container-fuild {
+    background: linear-gradient(rgba(35, 47, 53, 0.5), rgba(60, 42, 42, 0.5)), 
+                url("../img/s-107.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-size: cover; /*Sử dụng cover */
+}
+
+.input-container {
+    position: relative; /* Đặt relative để icon nằm trong input */
+    margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container textarea {
+    padding-right: 40px; /* Chừa khoảng trống bên phải cho icon */
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff; /* Màu chữ khi người dùng gõ vào */
+    background-color: rgba(255, 255, 255, 0.0) !important; /* Nền trắng mờ nhẹ */
+}
+
+.input-container textarea {
+    padding-right: 40px; /* Chừa khoảng trống bên phải cho icon */
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-container i {
+    position: absolute;
+    top: 5px; /* Căn icon lên phía trên */
+    right: 10px; /* Đặt icon sát bên phải */
+    font-size: 18px; /* Kích thước icon */
+    color: #999; /* Màu icon */
+    pointer-events: none; /* Để không ảnh hưởng đến việc nhập liệu */
+}
+
+/* Áp dụng màu trắng cho placeholder */
+.input-container textarea::placeholder,
+.input-container input::placeholder {
+    color: #fff; /* Màu placeholder */
+    opacity: 1; /* Đảm bảo độ đậm của màu */
+}
+
+/* Nếu muốn chỉ áp dụng cho phần tử cụ thể */
+#name::placeholder, #email::placeholder, #message::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+/* Đổi màu border khi nhấn vào input hoặc textarea */
+.form-control:focus {
+    border-color: green; /* Màu xanh khi focus */
+    box-shadow: 0 0 0 0.25rem rgba(0, 255, 98, 0.25); /* Đổ bóng xanh */
+}
+
+.c > .btn.active {
+    background-color: #28a745; /* Màu nền xanh lá khi active */
+    color: white; /* Màu chữ trắng khi active */
+}
+
+.c>.btn {
+    background-color: transparent; /* Màu nền trong suốt */
+    border: 1px solid #28a745; /* Đặt viền xanh lá cho nút */
+    color: #28a745; /* Màu chữ xanh lá */
+}
+
+.c> .btn:hover {
+    background-color: #28a745; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+}
+
+
+
+/* Khi trên màn hình nhỏ (Điện thoại) */
+@media (max-width: 767px) {
+    .col-sm-4 {
+        width: 100%; /* Xếp các hình ảnh thành một dòng */
+    }
+}
+
+
+
+
+/* Submenu dropdown */
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-menu >.dropdown-item{
+    display: none;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%; /* Đẩy submenu sang bên phải */
+    margin-top: -6px;
+    margin-left: 0;
+    border-radius: 0.25rem;
+}
+
+/* Hiển thị submenu khi hover */
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+
+.c > .container{
+    background-image: url("../img/shadow.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: scroll;
+    background-position-x: 50%;
+    background-position-y: 0%;
+}
+
+.fade-image {
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+}
+.fade-image.hidden {
+    opacity: 0;
+}
+.dropdown-item::after{
+    display: none;
+}
+
+.nav-item>ul{
+   
+    border-radius: 0;
+    border-block: 3px solid rgb(0, 119, 0);
+}
+
+.dropdown-submenu>ul{
+    border-radius: 0;
+    border-block: 3px solid rgb(0, 119, 0);
+}
+.bg-success{
+    background-image: url("../img/shadow.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-attachment: scroll;
+    background-position-x: 50%;
+    background-position-y: 0%;
+}
+.g{
+    background: linear-gradient(rgba(35, 47, 53, 0.5), rgba(60, 42, 42, 0.5)), 
+    url("../img/s-201-a.jpg");
+background-position: top;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+form.d-flex input[type="search"] {
+    width: 200px;
+}
+
+@media (max-width: 576px) {
+    form.d-flex input[type="search"] {
+        width: 100%;
+    }
+}
+
+.nav-link.dropdown-toggle::after {
+    display: none !important;
+}
+
+
+
+
+
